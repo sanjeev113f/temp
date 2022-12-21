@@ -1,7 +1,5 @@
 const form = document.getElementById("myForm");
 const result = document.getElementById("id1")
-
-
 form.addEventListener("submit", function(event) {
 	event.preventDefault();
 	const content = document.getElementById("content").value;
@@ -17,7 +15,7 @@ form.addEventListener("submit", function(event) {
 		})
 		.then(response => response.json())
 		.then(response => {
-			//console.log(JSON.stringify(response))
+			console.log(JSON.stringify(response))
 			result.innerHTML = response.word_count   
 			document.write(JSON.stringify(response))  
 			
